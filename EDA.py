@@ -5,6 +5,7 @@ conversion = pd.read_csv("conversion(4).csv")
 navegacion = pd.read_csv("navegacion(4).csv")
 
 navegacion = navegacion.dropna(subset = ["url_landing"])
+conversion = conversion.dropna(subset = [""])
 
 print("Este es el nuevo dataset: ")
 print(navegacion)
