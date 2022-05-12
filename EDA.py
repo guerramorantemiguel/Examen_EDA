@@ -36,6 +36,8 @@ df_2 = df.count(columna = ["lead-type"], FORM = True)
 
 df_3 = df.count(columna = ["user_recurrent"], true = True)
 
-media = df_3/columnas
+media = (df_3/columnas)*100
+print("El porcentaje de usuarios recurrentes es: ")
 print(media)
+
 
