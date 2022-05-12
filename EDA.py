@@ -8,7 +8,7 @@ navegacion = pd.read_csv("navegacion(4).csv")
 navegacion = navegacion.dropna(subset = ["gclid"])
 conversion = conversion.dropna(subset = ["result"])
 
-print("Estos son los nuevos datasets: ")
+print("Estos son los nuevos dataset: ")
 print(navegacion)
 print(conversion)
 # Miramos si hay datos repetidos
