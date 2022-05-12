@@ -1,5 +1,6 @@
 import pandas as pd 
 import matplotlib.pyplot as plt
+import numpy as np
 
 # Leemos los dataset
 conversion = pd.read_csv("conversion(4).csv")
@@ -24,6 +25,12 @@ print(csv_fusionado)
 
 columnas = Columnas(csv_fusionado)
 columnas.count()
+
+# Contamos número de CALL y FORM
+
+df_1 = df.count(columna = ["lead_type"], CALL = True)
+
+df_2 = df.count(columna = ["lead-type"], FORM = True)
 
 
 
