@@ -32,6 +32,13 @@ df_1 = df.count(columna = ["lead_type"], CALL = True)
 
 df_2 = df.count(columna = ["lead-type"], FORM = True)
 
+print("El número de CALL es: ")
+print(df_1)
+
+print("El número de FORM es: ")
+print(df_2)
+
+
 # Porcentaje de usuarios recurrentes
 
 df_3 = df.count(columna = ["user_recurrent"], true = True)
