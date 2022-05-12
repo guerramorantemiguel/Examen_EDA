@@ -1,6 +1,6 @@
 import pandas as pd 
 import matplotlib.pyplot as plt
-import Numpy as num
+
 # Leemos los dataset
 conversion = pd.read_csv("conversion(4).csv")
 navegacion = pd.read_csv("navegacion(4).csv")
