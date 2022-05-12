@@ -1,6 +1,6 @@
 import pandas as pd 
 import matplotlib.pyplot as plt
-
+import Numpy as num
 # Leemos los dataset
 conversion = pd.read_csv("conversion(4).csv")
 navegacion = pd.read_csv("navegacion(4).csv")
@@ -19,6 +19,11 @@ for group in df.groupby(df["gclid"]):
 # Fusionamos ambos dataset
 csv_fusionado = pd.concat(map(pd.read_csv, [conversion, navegacion]), ignore_index=True)
 print(csv_fusionado)
+
+
+
+columnas = Columnas(csv_fusionado)
+columnas.count()
 
 
 
