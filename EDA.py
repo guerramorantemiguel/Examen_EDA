@@ -23,7 +23,7 @@ print(csv_fusionado)
 
 
 
-columnas = Columnas(csv_fusionado)
+columnas = Columnas.(csv_fusionado)
 columnas.count()
 
 # Contamos número de CALL y FORM
@@ -40,4 +40,16 @@ media = (df_3/columnas)*100
 print("El porcentaje de usuarios recurrentes es: ")
 print(media)
 
+#Creamos gráfico con el porcentaje de usuarios recurrentes
 
+class Grafico_sectores:
+  def __init__(self, df_3, columnas):
+    self.df_3 = df_3
+    self.columnas = columnas
+  def crear_grafico(self):
+    fig, ax = plt.subplots()
+    self.df_3[self.columnas].plot(kind="hist", ax = ax)
+    ax.set_title("histograma", loc = "center", fontdict = {'fontsize': 14, 'fontweight' : 'bold', 'color': 'tab:blue'})
+    ax.set_ylabel('')
+    plt.savefig('img/histograma-' + '-'.join(self.columnas) + '.png', bbox_inches = 'tight')
+    return
