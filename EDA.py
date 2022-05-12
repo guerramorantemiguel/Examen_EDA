@@ -6,7 +6,7 @@ conversion = pd.read_csv("conversion(4).csv")
 navegacion = pd.read_csv("navegacion(4).csv")
 # Sacamos las columnas que nos interesan
 navegacion = navegacion.dropna(subset = ["gclid", "url_landing"])
-conversion = conversion.dropna(subset = ["result"])
+conversion = conversion.dropna(subset = ["result", "lead_type"])
 
 print("Estos son los nuevos dataset: ")
 print(navegacion)
